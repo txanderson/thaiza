@@ -1,0 +1,653 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thaiza Lacerda - Psicologia Infantil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .custom-purple {
+            color: #a799c3;
+        }
+        .bg-custom-purple {
+            background-color: #a799c3;
+        }
+        .border-custom-purple {
+            border-color: #a799c3;
+        }
+        .hover\:text-custom-purple-dark:hover {
+            color: #8a7ba3;
+        }
+        .hover\:bg-custom-purple-dark:hover {
+            background-color: #8a7ba3;
+        }
+        .text-custom-purple-light {
+            color: #d1c8e1;
+        }
+        .bg-custom-purple-light {
+            background-color: #d1c8e1;
+        }
+        
+        /* Animações para nuvens e balões */
+        .cloud {
+            animation: float-slow 20s infinite ease-in-out;
+        }
+        
+        .cloud-2 {
+            animation: float-slow 25s infinite ease-in-out;
+            animation-delay: 2s;
+        }
+        
+        .cloud-3 {
+            animation: float-slow 30s infinite ease-in-out;
+            animation-delay: 5s;
+        }
+        
+        .balloon {
+            animation: float 8s infinite ease-in-out;
+        }
+        
+        .balloon-2 {
+            animation: float 10s infinite ease-in-out;
+            animation-delay: 1s;
+        }
+        
+        .balloon-3 {
+            animation: float 12s infinite ease-in-out;
+            animation-delay: 3s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        @keyframes float-slow {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(30px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-8 md:px-20 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://i.imgur.com/lybyFmN.png" alt="Logo Thaiza Lacerda" class="w-10 h-10">
+                <span class="text-2xl font-bold custom-purple">Thaiza Lacerda</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="custom-purple hover:text-custom-purple-dark font-semibold">Início</a>
+                <a href="#sobre" class="custom-purple hover:text-custom-purple-dark font-semibold">Sobre</a>
+                <a href="#servicos" class="custom-purple hover:text-custom-purple-dark font-semibold">Serviços</a>
+                <a href="#depoimentos" class="custom-purple hover:text-custom-purple-dark font-semibold">Depoimentos</a>
+                <a href="#contato" class="custom-purple hover:text-custom-purple-dark font-semibold">Contato</a>
+            </div>
+            <button class="md:hidden custom-purple" id="menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white pb-4 px-8 md:px-20" id="mobile-menu">
+            <a href="#inicio" class="block py-2 custom-purple hover:text-custom-purple-dark font-semibold">Início</a>
+            <a href="#sobre" class="block py-2 custom-purple hover:text-custom-purple-dark font-semibold">Sobre</a>
+            <a href="#servicos" class="block py-2 custom-purple hover:text-custom-purple-dark font-semibold">Serviços</a>
+            <a href="#depoimentos" class="block py-2 custom-purple hover:text-custom-purple-dark font-semibold">Depoimentos</a>
+            <a href="#contato" class="block py-2 custom-purple hover:text-custom-purple-dark font-semibold">Contato</a>
+            <a href="https://api.whatsapp.com/send?phone=5577998985776&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações!" target="_blank" rel="noopener noreferrer" class="block py-2 text-green-600 hover:text-green-800 font-semibold">WhatsApp</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section com nuvens e balões SVG -->
+    <section id="inicio" class="relative overflow-hidden bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 py-20">
+        <!-- Decorative elements -->
+        <div class="absolute top-10 left-10 cloud">
+            <svg width="100" height="60" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M90 40C90 51.0457 81.0457 60 70 60H30C18.9543 60 10 51.0457 10 40C10 28.9543 18.9543 20 30 20C30 8.95431 38.9543 0 50 0C61.0457 0 70 8.95431 70 20C81.0457 20 90 28.9543 90 40Z" fill="white" fill-opacity="0.8"></path>
+            </svg>
+        </div>
+        <div class="absolute top-20 right-20 cloud-2">
+            <svg width="80" height="48" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M90 40C90 51.0457 81.0457 60 70 60H30C18.9543 60 10 51.0457 10 40C10 28.9543 18.9543 20 30 20C30 8.95431 38.9543 0 50 0C61.0457 0 70 8.95431 70 20C81.0457 20 90 28.9543 90 40Z" fill="white" fill-opacity="0.8"></path>
+            </svg>
+        </div>
+        <div class="absolute bottom-10 left-1/4 cloud-3">
+            <svg width="60" height="36" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M90 40C90 51.0457 81.0457 60 70 60H30C18.9543 60 10 51.0457 10 40C10 28.9543 18.9543 20 30 20C30 8.95431 38.9543 0 50 0C61.0457 0 70 8.95431 70 20C81.0457 20 90 28.9543 90 40Z" fill="white" fill-opacity="0.8"></path>
+            </svg>
+        </div>
+        <div class="absolute top-10 right-1/3 balloon">
+            <svg width="40" height="50" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20C0 8.95431 8.95431 0 20 0Z" fill="#FF6B6B"></path>
+                <path d="M20 40L23 50H17L20 40Z" fill="#FF6B6B"></path>
+            </svg>
+        </div>
+        <div class="absolute bottom-20 right-10 balloon-2">
+            <svg width="30" height="40" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20C0 8.95431 8.95431 0 20 0Z" fill="#4ECDC4"></path>
+                <path d="M20 40L23 50H17L20 40Z" fill="#4ECDC4"></path>
+            </svg>
+        </div>
+        
+        
+        <div class="container mx-auto px-8 md:px-20 flex flex-col md:flex-row items-center justify-between relative z-10">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold custom-purple mb-4">O cuidado psicológico que transforma a infância.</h1>
+                <p class="text-lg custom-purple mb-8">Ajudando crianças a florescerem em um ambiente acolhedor e colorido. Atendimento especializado para o desenvolvimento saudável do seu filho.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://api.whatsapp.com/send?phone=5577998985776&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações!" target="_blank" rel="noopener noreferrer" class="bg-custom-purple hover:bg-custom-purple-dark text-white font-bold py-3 px-6 rounded-full transition duration-300 text-center">Agendar Consulta</a>
+                    <a href="#servicos" class="bg-pink-400 hover:bg-pink-500 text-white font-bold py-3 px-6 rounded-full transition duration-300 text-center">Nossos Serviços</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <svg width="350" height="350" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background circle -->
+                    <circle cx="200" cy="200" r="180" fill="#FEF6FF"></circle>
+                    
+                    <!-- Psychologist -->
+                    <circle cx="200" cy="140" r="60" fill="#FFB6C1"></circle> <!-- Head -->
+                    <path d="M140 250C140 194.772 165.772 170 200 170C234.228 170 260 194.772 260 250H140Z" fill="#a799c3"></path> <!-- Body -->
+                    <circle cx="180" cy="130" r="8" fill="#333"></circle> <!-- Left eye -->
+                    <circle cx="220" cy="130" r="8" fill="#333"></circle> <!-- Right eye -->
+                    <path d="M190 155C190 155 200 165 210 155" stroke="#333" stroke-width="3" stroke-linecap="round"></path> <!-- Smile -->
+                    <path d="M160 100C160 100 170 80 200 80C230 80 240 100 240 100" stroke="#8B4513" stroke-width="8" stroke-linecap="round"></path> <!-- Hair -->
+                    
+                    <!-- Child -->
+                    <circle cx="120" cy="240" r="40" fill="#FFDAB9"></circle> <!-- Head -->
+                    <path d="M90 320C90 284.772 103.431 270 120 270C136.569 270 150 284.772 150 320H90Z" fill="#4ECDC4"></path> <!-- Body -->
+                    <circle cx="110" cy="235" r="5" fill="#333"></circle> <!-- Left eye -->
+                    <circle cx="130" cy="235" r="5" fill="#333"></circle> <!-- Right eye -->
+                    <path d="M115 250C115 250 120 255 125 250" stroke="#333" stroke-width="2" stroke-linecap="round"></path> <!-- Smile -->
+                    <path d="M100 220C100 220 110 205 120 205C130 205 140 220 140 220" stroke="#FFD700" stroke-width="5" stroke-linecap="round"></path> <!-- Hair -->
+                    
+                    <!-- Toys around -->
+                    <circle cx="280" cy="280" r="25" fill="#FF6B6B"></circle> <!-- Ball -->
+                    <rect x="90" y="330" width="40" height="40" fill="#FFD166"></rect> <!-- Block -->
+                    <polygon points="280,330 300,360 260,360" fill="#06D6A0"></polygon> <!-- Triangle -->
+                    
+                    <!-- Stars -->
+                    <path d="M320 120L325 130L335 132L327 140L329 150L320 145L311 150L313 140L305 132L315 130L320 120Z" fill="#FFD166"></path>
+                    <path d="M80 180L83 187L90 188L85 193L86 200L80 197L74 200L75 193L70 188L77 187L80 180Z" fill="#FF6B6B"></path>
+                    <path d="M260 200L263 207L270 208L265 213L266 220L260 217L254 220L255 213L250 208L257 207L260 200Z" fill="#06D6A0"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-16 bg-white">
+        <div class="container mx-auto px-8 md:px-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold custom-purple mb-2">Sobre Mim</h2>
+                <div class="w-20 h-1 bg-pink-400 mx-auto mb-6"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0">
+                    <img src="https://i.imgur.com/UKdxuZZ.jpeg" alt="Thaiza Lacerda" class="w-full h-auto rounded-xl border-8 border-custom-purple-light shadow-lg">
+                </div>
+                
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-bold custom-purple mb-4">Psicóloga Thaiza Lacerda</h3>
+                    <p class="text-gray-700 mb-4">Me chamo Thaiza Lacerda, sou psicoterapeuta infantojuvenil apaixonada pelo universo infantil. Atuo com crianças e adolescentes, utilizando a Terapia Cognitivo Comportamental (TCC) como base do meu trabalho.</p>
+                    <p class="text-gray-700 mb-6">Sou especializada em Transtorno de Déficit de Atenção e Hiperatividade (TDAH) e em ludoterapia — transformo brincadeiras em poderosas ferramentas para o desenvolvimento emocional e comportamental dos pequenos.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center">
+                            <div class="bg-custom-purple-light rounded-full p-2 mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 custom-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Terapia Cognitivo Comportamental</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-custom-purple-light rounded-full p-2 mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 custom-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Especialista em TDAH</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-custom-purple-light rounded-full p-2 mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 custom-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">Ludoterapia</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-custom-purple-light rounded-full p-2 mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 custom-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <span class="text-gray-700">CRP 03/22677</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://api.whatsapp.com/send?phone=5577998985776&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações!" target="_blank" rel="noopener noreferrer" class="inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-full transition duration-300">Conheça meu trabalho</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-16 bg-custom-purple-light bg-opacity-20">
+        <div class="container mx-auto px-8 md:px-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold custom-purple mb-2">Nossos Serviços</h2>
+                <div class="w-20 h-1 bg-pink-400 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Oferecemos diversos serviços especializados para o desenvolvimento saudável do seu filho</p>
+            </div>
+            
+            <!-- Banner de atendimento presencial e online -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-10 border-l-4 border-custom-purple">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="flex items-center mb-4 md:mb-0">
+                        <div class="mr-4 text-4xl">🏠 💻</div>
+                        <div>
+                            <h3 class="text-xl font-bold custom-purple">Atendimento Presencial e Online</h3>
+                            <p class="text-gray-600">Flexibilidade para atender você e seu filho da maneira mais conveniente para sua família.</p>
+                        </div>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=5577998985776&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações!" target="_blank" rel="noopener noreferrer" class="bg-custom-purple hover:bg-custom-purple-dark text-white font-bold py-2 px-6 rounded-full transition duration-300">Agendar</a>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Serviço 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-3 bg-pink-400"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-3xl">🎮</span>
+                        </div>
+                        <h3 class="text-xl font-bold custom-purple mb-3">Ludoterapia</h3>
+                        <p class="text-gray-600 mb-4">Através de jogos e brincadeiras, ajudamos as crianças a expressarem seus sentimentos e desenvolverem habilidades sociais e emocionais.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-gray-600">Jogos terapêuticos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-gray-600">Arteterapia</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-gray-600">Contação de histórias</span>
+                            </li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send?phone=5577998985776&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20Ludoterapia!" target="_blank" rel="noopener noreferrer" class="text-pink-500 font-semibold hover:text-pink-700 transition duration-300 flex items-center">
+                            Saiba mais
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Serviço 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-3 bg-custom-purple"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-custom-purple-light rounded-full flex items-center justify-center mb-4">
+                            <span class="text-3xl">📝</span>
+                        </div>
+                        <h3 class="text-xl font-bold custom-purple mb-3">Avaliação e Tratamento TDAH</h3>
+                        <p class="text-gray-600 mb-4">Avaliação completa para identificar dificuldades de atenção, hiperatividade e impulsividade, com plano de tratamento personalizado.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-gray-600">Avaliação comportamental</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-gray-600">Estratégias de manejo</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-gray-600">Relatório detalhado</span>
+                            </li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send?phone=5577998985776&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20Avaliação%20e%20Tratamento%20TDAH!" target="_blank" rel="noopener noreferrer" class="custom-purple font-semibold hover:text-custom-purple-dark transition duration-300 flex items-center">
+                            Saiba mais
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Serviço 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="h-3 bg-blue-400"></div>
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-3xl">👨‍👩‍👧‍👦</span>
+                        </div>
+                        <h3 class="text-xl font-bold custom-purple mb-3">Orientação Parental</h3>
+                        <p class="text-gray-600 mb-4">Suporte e orientação para pais lidarem com desafios na educação e desenvolvimento dos filhos, fortalecendo vínculos familiares.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-gray-600">Sessões individuais</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-gray-600">Grupos de apoio</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span class="text-gray-600">Material de apoio</span>
+                            </li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send?phone=5577998985776&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20Orientação%20Parental!" target="_blank" rel="noopener noreferrer" class="text-blue-500 font-semibold hover:text-blue-700 transition duration-300 flex items-center">
+                            Saiba mais
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="py-16 bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100">
+        <div class="container mx-auto px-8 md:px-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold custom-purple mb-2">Depoimentos</h2>
+                <div class="w-20 h-1 bg-pink-400 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">O que os pais dizem sobre nosso trabalho</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-custom-purple-light rounded-full flex items-center justify-center mr-4">
+                            <span class="text-xl">👩</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold custom-purple">Márcia Santos</h4>
+                            <p class="text-gray-500 text-sm">Mãe do Pedro, 8 anos</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"A Thaiza transformou a vida do meu filho. Ele tinha dificuldades para se expressar e socializar, mas após alguns meses de terapia, vimos uma mudança incrível. Agora ele está mais confiante e feliz!"</p>
+                    <div class="flex text-yellow-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-xl">👨</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold custom-purple">Roberto Oliveira</h4>
+                            <p class="text-gray-500 text-sm">Pai da Júlia, 6 anos</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"As sessões de orientação parental nos ajudaram muito a entender melhor nossa filha. A abordagem da Thaiza é incrível, sempre com muita paciência e carinho. Recomendo a todos os pais!"</p>
+                    <div class="flex text-yellow-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-xl">👩</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold custom-purple">Fernanda Lima</h4>
+                            <p class="text-gray-500 text-sm">Mãe do Lucas, 10 anos</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Meu filho tinha problemas de ansiedade que afetavam seu desempenho escolar. A Thaiza criou um plano personalizado que o ajudou a superar seus medos. O ambiente colorido e acolhedor do consultório fez toda a diferença!"</p>
+                    <div class="flex text-yellow-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="py-16 bg-white">
+        <div class="container mx-auto px-8 md:px-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold custom-purple mb-2">Entre em Contato</h2>
+                <div class="w-20 h-1 bg-pink-400 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Agende uma consulta ou tire suas dúvidas</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2 bg-custom-purple-light bg-opacity-20 rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold custom-purple mb-6">Informações de Contato</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-custom-purple-light rounded-full p-3 mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 custom-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold custom-purple mb-1">Endereço</h4>
+                                <p class="text-gray-600">Vitória da Conquista</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-custom-purple-light rounded-full p-3 mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 custom-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold custom-purple mb-1">Telefone</h4>
+                                <p class="text-gray-600">
+                                    <a href="https://api.whatsapp.com/send?phone=5577998985776&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações!" target="_blank" rel="noopener noreferrer" class="hover:text-green-600 transition duration-300">(77) 99898-5776</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-custom-purple-light rounded-full p-3 mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 custom-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold custom-purple mb-1">E-mail</h4>
+                                <p class="text-gray-600">thaiza_oliveira10@hotmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-custom-purple-light rounded-full p-3 mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 custom-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold custom-purple mb-1">Horário de Atendimento</h4>
+                                <p class="text-gray-600">Segunda a Sexta: 8h às 18h<br>Sábado: 9h às 12h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold custom-purple mb-3">Redes Sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.instagram.com/thaizalacerda.psi/" target="_blank" rel="noopener noreferrer" class="bg-custom-purple text-white p-2 rounded-full hover:bg-custom-purple-dark transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="bg-custom-purple text-white p-2 rounded-full hover:bg-custom-purple-dark transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                                </svg>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone=5577998985776&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações!" target="_blank" rel="noopener noreferrer" class="bg-custom-purple text-white p-2 rounded-full hover:bg-custom-purple-dark transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold custom-purple mb-6">Envie uma Mensagem</h3>
+                        
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Nome</label>
+                                    <input type="text" id="name" name="name" class="w-full px-8 md:px-20 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-purple" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                                    <input type="email" id="email" name="email" class="w-full px-8 md:px-20 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-purple" required>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-8 md:px-20 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-purple" required>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-8 md:px-20 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-purple" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-custom-purple hover:bg-custom-purple-dark text-white font-bold py-3 px-6 rounded-lg transition duration-300">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-custom-purple text-white py-10">
+        <div class="container mx-auto px-8 md:px-20">
+            <div class="text-center">
+                <p>&copy; 2023 Thaiza Lacerda. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://api.whatsapp.com/send?phone=5577998985776&text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações!" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'94a29a969624d071',t:'MTc0ODk4OTUwMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
